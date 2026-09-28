@@ -6,8 +6,8 @@
 
 Watta works with your open project: it explores relevant files, answers questions, proposes code changes, and lets you review the result before keeping it.
 
-[![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/watta-ai.watta-ai-vscode?style=for-the-badge&logo=visualstudiocode&label=VS%20Code%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/watta-ai.watta-ai-vscode?style=for-the-badge&logo=visualstudiocode&label=Installs)](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode)
+[![Install for VS Code](https://img.shields.io/badge/VS%20Code-Install%20Watta-007ACC?style=for-the-badge&logo=visualstudiocode)](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode)
+[![Explore models](https://img.shields.io/badge/AI%20Models-200%2B-17B5A5?style=for-the-badge)](https://watta.io/models)
 
 **[Install from Marketplace](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode)** · **[Explore Watta](https://watta.io)** · **[View models](https://watta.io/models)** · **[Plans and Energy](https://watta.io/pricing)**
 
