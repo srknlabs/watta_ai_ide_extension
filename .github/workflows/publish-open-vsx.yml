@@ -1,0 +1,56 @@
+name: Publish VSIX to Open VSX
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Published GitHub release tag, e.g. v0.18.113'
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  publish:
+    if: github.repository == 'srknlabs/watta_ai_ide_extension'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      id-token: write
+    concurrency:
+      group: open-vsx-publish
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - name: Download and validate the published VSIX
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo 'Invalid release tag'; exit 1; }
+          VERSION="${RELEASE_TAG#v}"
+          FILE="watta-ai-vscode-${VERSION}.vsix"
+          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq '.isDraft' | grep -qx false
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$FILE"
+          unzip -p "$FILE" extension/package.json > manifest.json
+          node -e 'const p=require("./manifest.json"); if(p.publisher!=="watta-ai" || p.name!=="watta-ai-vscode" || p.version!==process.env.RELEASE_TAG.slice(1)) process.exit(1)'
+          echo "VSIX_FILE=$FILE" >> "$GITHUB_ENV"
+      - name: Publish using short-lived OpenID Connect credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="${RELEASE_TAG#v}"
+          CHECKSUM_URL="https://open-vsx.org/api/watta-ai/watta-ai-vscode/$VERSION/file/watta-ai.watta-ai-vscode-$VERSION.sha256"
+          STATUS=$(curl --silent --show-error --location --output registry.sha256 --write-out '%{http_code}' "$CHECKSUM_URL")
+          if [[ "$STATUS" == 200 ]]; then
+            EXPECTED=$(awk '{print $1}' registry.sha256)
+            ACTUAL=$(sha256sum "$VSIX_FILE" | awk '{print $1}')
+            [[ "$EXPECTED" == "$ACTUAL" ]] || { echo 'Existing registry version has a different checksum'; exit 1; }
+            echo 'Identical version already published; nothing to upload.'
+          elif [[ "$STATUS" == 404 ]]; then
+            npx --yes ovsx@1.2.0 publish "$VSIX_FILE" --trusted-publishing
+          else
+            echo "Registry returned HTTP $STATUS"; exit 1
+          fi
