@@ -1,25 +1,33 @@
-<h1 align="center">Watta.io for VS Code</h1>
+# Watta: AI Coding Agent | 300+ AI Models
+
+Describe what you want to build, fix, or improve. Watta works with your project, edits multiple files, and lets you review and undo changes — with 300+ AI models in one account.
+
+## Try 3 paid AI models for free
+
+**[Create your free Watta account and get promo access to 3 paid AI models →](https://watta.io/register?utm_source=extension_readme&utm_medium=referral&utm_campaign=ide_promo)**
+
+The promotional selection rotates, so you can try different models over time. Access is temporary; check the current models and promo limits in Watta before starting. Look for **Temp access** in the model picker.
+
+No separate provider API keys are needed. Install the extension, connect your Watta account, and try your first task in your own project.
+
+### Choose your extension registry
+
+- **[Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode)**
+- **[Install from Open VSX](https://open-vsx.org/extension/watta-ai/watta-ai-vscode)**
+
+[Setup guide](https://watta.io/docs/ide/watta-extension) · [Plans and Energy](https://watta.io/dashboard/pricing) · [Privacy](https://watta.io/privacy)
+
+> **Try this first:** “Explain this project and suggest one small improvement. Ask before changing files.”
 
 <p align="center">
-  <img src="https://watta.io/apps/vscode/screenshots/overview.png" alt="Watta for VS Code — build with Watta in VS Code" width="100%">
-</p>
-
-<p align="center">
-  An AI coding agent that understands your workspace, edits code safely, and gives you access to 200+ AI models through one Watta.io account.
-</p>
-
-<p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode">Install from Marketplace</a>
-  · <a href="https://watta.io">Watta.io</a>
-  · <a href="https://watta.io/dashboard/pricing">Plans and Energy</a>
-  · <a href="https://watta.io/privacy">Privacy</a>
+  <img src="https://watta.io/apps/vscode/screenshots/overview.png" alt="Watta IDE Extension — describe a task, review code changes, and build in VS Code" width="100%">
 </p>
 
 ## Build software by describing the result
 
 Open a project, write what you want in plain language, and let Watta work with the codebase already open in your editor. It can inspect files, search the workspace, explain code, suggest a plan, and make edits directly in your files.
 
-Use one account for Watta models and a catalog of 200+ models from leading providers. The model picker shows current availability, pricing, Energy usage, and supported reasoning levels without requiring a separate extension update.
+Use one account for Watta models and a catalog of 300+ models from leading providers. The model picker shows current availability, pricing, Energy usage, and supported reasoning levels without requiring a separate extension update.
 
 > **For everyday tasks:** “Add a FAQ block to the product page”, “Find why this form does not submit”, or “Explain this file and make the code cleaner.”
 
@@ -32,10 +40,10 @@ Use one account for Watta models and a catalog of 200+ models from leading provi
 - **Site preview.** Open an HTML file and run **Watta.io: Preview Site** to view it inside VS Code. You can also enter a running localhost URL.
 - **Next edit.** Run **Watta.io: Suggest Next Edit** in a code file to review a small follow-up edit before applying it. Set `wattaAi.nextEdit.enabled` to suggest one automatically after saving.
 - **Files and folders as priority context.** Attach from the `+` menu, drag from Explorer, or use **Add File to Chat** from an editor tab. Pinned resources tell the agent where to focus first.
-- **200+ models in one place.** Start with Watta Free or choose Watta Lite, Pro, and Max. Use compatible models from providers such as OpenAI, Anthropic, Google, Kimi, DeepSeek, Alibaba, and more.
+- **300+ models in one place.** Start with Watta Free or choose Watta Lite, Pro, and Max. Use compatible models from providers such as OpenAI, Anthropic, Google, Kimi, DeepSeek, Alibaba, and more.
 - **Energy and access are transparent.** See Energy cost, model pricing, and plan/credit availability before you send a request.
 - **Keep working while Watta works.** New requests go into a queue by default. You can also stop the current request and run the new one immediately.
-- **Readable results, not noise.** Tool activity is summarized as one live status, while final answers focus on the result and the essential technical details.
+- **Follow the agent’s progress.** Brief updates explain its approach and useful findings. Technical steps stay in a collapsed work log under the response, with one current status above the composer while it works. Final answers focus on the result and verification.
 
 ## Get started in under a minute
 
@@ -118,13 +126,13 @@ The catalog is loaded from Watta.io, so new models, provider names, prices, and 
 
 ## Settings
 
-| Setting                             | Default                | Description                                                                                                                                                                   |
-| ----------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `wattaAi.agent.maxSteps`            | `8`                    | Maximum agent steps for one request.                                                                                                                                          |
-| `wattaAi.agent.enableTerminal`      | `true`                 | Allow the agent to request terminal commands. Every command still needs approval unless you explicitly remember it for the workspace.                                         |
+| Setting                             | Default                | Description                                                                                                                                                                 |
+| ----------------------------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `wattaAi.agent.maxSteps`            | `8`                    | Maximum agent steps for one request.                                                                                                                                        |
+| `wattaAi.agent.enableTerminal`      | `true`                 | Allow the agent to request terminal commands. Every command still needs approval unless you explicitly remember it for the workspace.                                       |
 | `wattaAi.inlineSuggestions.enabled` | `false`                | Enable Watta Fim inline completions. The Watta status-bar toggle remembers your choice and takes precedence over this setting. Requires sign-in and an eligible chat model. |
-| `wattaAi.apiBaseUrl`                | Watta.io API           | Advanced: override the Watta API endpoint.                                                                                                                                    |
-| `wattaAi.authorizationUrl`          | Watta.io authorization | Advanced: override the sign-in endpoint.                                                                                                                                      |
+| `wattaAi.apiBaseUrl`                | Watta.io API           | Advanced: override the Watta API endpoint.                                                                                                                                  |
+| `wattaAi.authorizationUrl`          | Watta.io authorization | Advanced: override the sign-in endpoint.                                                                                                                                    |
 
 ## Privacy and security
 
