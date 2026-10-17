@@ -1,3 +1,111 @@
+# 0.19.9
+
+- Refresh server model capabilities before each agent request and before browser or MCP actions, so newly verified models become available without restarting the editor.
+- Distinguish pending checks, temporary failures, disabled tools, and unsupported models instead of showing a generic unsupported-model warning.
+- Restore the task draft when an agent request is rejected before it starts, without overwriting a newer draft or leaving rejected turns in model history.
+- Keep the shared model catalog and default Agent mode on paid plans, with automatically checked server capabilities and no separate Agent filter.
+
+# 0.19.8
+
+- Keep one shared model catalog: remove the Agent filter and name suffixes; use Agent as the initial mode on Starter/Pro/Max while preserving saved choices and Free Ask access.
+- Choose a compatible initial model for a fresh Agent chat and allow changing modes without forcing the model picker open.
+- Replace obsolete instructions about an Agent model badge with direct tool-compatibility guidance in all locales.
+
+# 0.19.7
+
+- Return control after 1.5 seconds for long-running terminal commands so local web servers do not block browser verification.
+- Add managed command status/output and stop tools; clean up child processes on cancellation, sign-out, extension shutdown, or the 30-minute lifetime limit.
+- Track pending verification separately from successful and failed checks; permit bounded command polling without rerunning tests.
+- Rename the IDE view container to Watta in every locale and add padding to review-summary hover targets.
+
+# 0.19.5
+
+- Preserve malformed tool arguments instead of collapsing different truncated responses into an empty object.
+- Recover oversized edit proposals with bounded output-token increases (8192 → 16384 → 32768) and small-edit guidance.
+- Surface missing edit fields to the model and mark malformed edit tasks as failed.
+- Keep duplicate-call and total-call loop protection enabled.
+
+# 0.19.4
+
+- Move the secondary Start for free control and caption immediately before Modes and context.
+
+# 0.19.3
+
+- Remove the duplicate README brand heading and introductory slogan.
+
+# 0.19.2
+
+- Simplify the lower signup area to a centered Start for free control and its caption.
+- Keep Google and GitHub signup controls only in the opening promo; reduce both Start for free controls by 20%.
+
+# 0.19.1
+
+- Restore styled signup buttons in the VS Code extension card without inline CSS.
+- Show each demo animation at full width in its matching workflow section.
+
+# 0.19.0
+
+- Add MCP stdio and Streamable HTTP tool connections with explicit connection and action approval.
+- Add isolated Chrome browser tools: navigation, accessibility snapshots, clicks, form filling, console errors and screenshots for verified image-capable models.
+- Gate agent tools on Starter, Pro and Max and on server-managed model capabilities.
+- Give compatible Ask and Plan modes read-only workspace tools; enforce mode boundaries in the host and API.
+- Load root and applicable nested project rules, continue from edits to verification, report missing checks, and compact older completed tool rounds.
+- Initially add model compatibility labels and an Agent filter (replaced by the shared catalog in 0.19.8); preserve ordinary Free Ask.
+- Keep inline suggestions off by default. No separate suggestion budget is introduced.
+# 0.18.135
+
+- Keep a new sign-in callback while an older cancelled token exchange is still finishing.
+- Keep cancellation effective if it happens while tokens are being saved.
+
+# 0.18.134
+
+- Preserve an active sign-in attempt when a stale callback arrives, and ignore duplicate callbacks.
+- Prevent a cancelled sign-in from restoring a session after token exchange finishes.
+- Identify Antigravity and Devin separately in optional onboarding and product measurements.
+- Improve marketplace discovery for code completion, autocomplete, code review and test generation.
+
+# 0.18.133
+
+- Fix send-menu actions being dismissed before their click handlers run.
+- Add edit, save, cancel and run-now controls to queued prompts; pause a queued prompt while it is edited.
+- Preserve composer drafts when automatically starting a queued request.
+
+# 0.18.132
+
+- Render session counters as plain Energy-colored text.
+- Use model-picker hover styling across session rows, fixing the bright button hover fill.
+
+# 0.18.131
+
+- Center the sign-in screen vertically and enlarge the authorization button.
+- Refresh logo assets with transparent internal shapes and regenerate the marketplace PNG.
+
+# 0.18.130
+
+- Preserve dropped files before the browser clears drag data, support folder entry fallback and multiple directory batches, and prevent VS Code from intercepting handled drops.
+- Recognize URI-named Explorer resources when dragging files or folders into chat.
+
+# 0.18.129
+
+- Authenticate model catalog requests so paid plans retain normal pricing for models with Free promotional access.
+- Remove model row dividers and reduce horizontal padding.
+
+# 0.18.128
+
+- Remove the reasoning selector icon.
+
+# 0.18.127
+
+- Tighten chat action spacing, pinned context and file review controls.
+- Keep the work log open by default with three visible rows, smooth scrolling to new steps, and a top inset shadow when earlier steps are available. Preserve manual scrolling through earlier steps.
+- Rename the Russian work-log heading to «В работе».
+
+## 0.18.126
+
+- Fix Accept All to save and settle every edit in a response, including repeated changes to the same file. Keep reviews available on save failures or cancellation conflicts.
+- Move changed files above the chat input and keep pinned context inside the composer.
+- Show a compact work log with expandable steps, and open a dedicated editor review with file patches and saved before/after comparisons. Retain accepted review history locally.
+
 # 0.18.125
 
 - Refresh the sign-in screen with the color logo, free access to three premium models, and Chat & Work, Remote Telegram App and model catalog benefits.
@@ -55,6 +163,13 @@
 - Add optional authenticated product measurements for the marketing dashboard, respecting editor telemetry settings. No prompts, code, file paths, or raw errors are collected.
 
 # Changelog
+
+## 0.19.6 — 2026-10-15
+
+- Send pasted, selected and dropped PNG/JPEG/WebP/GIF attachments as image input instead of source text. Validate type/size and reject text-only model requests before generation.
+- Keep image input independent of browser screenshot permissions.
+- Add browser viewport resizing and measured layout dimensions for desktop/mobile and overflow verification.
+
 
 ## 0.18.113
 
