@@ -1,3 +1,8 @@
+# 0.19.10
+
+- Enable Agent on Free and select a compatible free model when starting a new Agent chat.
+- Update the extension display name, description, and Marketplace keywords.
+
 # 0.19.9
 
 - Refresh server model capabilities before each agent request and before browser or MCP actions, so newly verified models become available without restarting the editor.
