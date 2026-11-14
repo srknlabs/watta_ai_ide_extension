@@ -2,6 +2,8 @@
 
 Build features, fix bugs, and refactor across files in your editor. Choose your AI model and work through one Watta account — no separate provider API keys.
 
+**Latest release:** [0.19.14](https://github.com/srknlabs/watta_ai_ide_extension/releases/tag/v0.19.14) · [Changelog](CHANGELOG.md)
+
 [Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode) · [Install from Open VSX](https://open-vsx.org/extension/watta-ai/watta-ai-vscode)
 
 **[Create your Watta account](https://watta.io/register?utm_source=extension_readme&utm_medium=referral&utm_campaign=ide_onboarding)** · [Setup guide](https://watta.io/docs/ide/watta-extension) · [Pricing](https://watta.io/pricing)
@@ -35,7 +37,11 @@ Completion uses **Watta Fim**, independently of the eligible chat model you sele
 
 ## Your control & privacy
 
-Review file edits and accept or revert them. Restore the latest local checkpoint when needed. Terminal commands and external tool actions require approval; terminal approvals can be remembered for the workspace.
+Review file edits and accept or revert them. Restore the latest local checkpoint when needed. Watta Work file proposals wait for approval and remain available after reloading VS Code.
+
+When the agent asks to open a page, choose **Allow once**, **Always allow**, or **Skip**. **Always allow** remembers navigation for the same origin (scheme, host, and port) in the current workspace, including after restarting VS Code. Navigation to a different origin, clicks, form input, and MCP actions still require separate approval. Browser navigation requested from Watta Work asks for approval each time.
+
+Terminal commands have their own workspace approval. To clear remembered approvals, open the Command Palette and run **Watta.io: Reset Workspace Approvals**.
 
 Requests may send your prompt and relevant project context, including code and file paths, to Watta.io. Usage measurements respect VS Code telemetry settings and can be disabled with `wattaAi.telemetry.enabled`.
 
