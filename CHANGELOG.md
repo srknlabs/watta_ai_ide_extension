@@ -1,3 +1,11 @@
+# 0.19.14
+
+- Choose **Always allow** to remember browser navigation to the same origin (scheme, host, and port) in the current workspace across VS Code restarts. Use **Reset Workspace Approvals** in the Command Palette to clear the permission.
+- Navigation to another origin, clicks, form input, and MCP actions still ask separately. Browser navigation requested from Watta Work asks for approval each time.
+- Show the destination URL, improve approval card spacing in narrow panels, and mark skipped and failed actions in the work log.
+- Review proposed file changes in Watta Work before they are applied. The IDE restores pending reviews after a window reload and reports validation errors and review results to Work.
+- Queue task and review updates during a disconnect and send them when the IDE reconnects.
+
 # 0.19.10
 
 - Enable Agent on Free and select a compatible free model when starting a new Agent chat.
