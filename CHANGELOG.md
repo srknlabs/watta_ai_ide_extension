@@ -1,3 +1,21 @@
+# 0.19.25
+
+- Match the model power filter to the editor's compact menus and support keyboard navigation.
+
+# 0.19.24
+
+- Soften the model picker with borderless sort and filter buttons and a checkmark for the selected model.
+
+# 0.19.23
+
+- Simplify model rows by removing repeated provider prefixes and dividers between prices.
+- Show recently added models first within each provider in the default sort.
+
+# 0.19.22
+
+- Show the model name, prices, and Energy estimate in one row. Add provider filters and sorting by Input, Output, and Energy.
+- Show a lock on unavailable models and keep the Free and Temp access filters close to the list.
+
 # 0.19.21
 
 - Add MCP servers by URL from the tools menu and try Microsoft Learn with a sample prompt. Show the number of active MCP connections on the toolbar.
