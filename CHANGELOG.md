@@ -1,3 +1,32 @@
+# 0.19.21
+
+- Add MCP servers by URL from the tools menu and try Microsoft Learn with a sample prompt. Show the number of active MCP connections on the toolbar.
+- Match the new chat logo to the sign-in screen and align response details to the right.
+
+# 0.19.20
+
+- Underline status bar text links on hover and keep status bar controls on a transparent background.
+
+# 0.19.19
+
+- Match the chat energy icon to the message metadata font size and the Usage link to the account label color.
+
+# 0.19.18
+
+- Use the Energy-colored Watta Signal mark on a transparent background for the extension card icon.
+
+# 0.19.17
+
+- Remove the premium model promotion from the sign-in screen.
+
+# 0.19.16
+
+- Show the Energy-colored Watta Signal mark on sign-in, in the new chat screen, and on the Watta model filter. Remove the logo beside All sessions.
+
+# 0.19.15
+
+- Update the extension card icon to the teal Watta Signal tile.
+
 # 0.19.14
 
 - Choose **Always allow** to remember browser navigation to the same origin (scheme, host, and port) in the current workspace across VS Code restarts. Use **Reset Workspace Approvals** in the Command Palette to clear the permission.

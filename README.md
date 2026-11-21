@@ -2,7 +2,7 @@
 
 Build features, fix bugs, and refactor across files in your editor. Choose your AI model and work through one Watta account — no separate provider API keys.
 
-**Latest release:** [0.19.14](https://github.com/srknlabs/watta_ai_ide_extension/releases/tag/v0.19.14) · [Changelog](CHANGELOG.md)
+**Latest release:** [0.19.21](https://github.com/srknlabs/watta_ai_ide_extension/releases/tag/v0.19.21) · [Changelog](CHANGELOG.md)
 
 [Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode) · [Install from Open VSX](https://open-vsx.org/extension/watta-ai/watta-ai-vscode)
 
@@ -27,7 +27,7 @@ Try in Agent mode: **“Find why this test fails and fix the cause.”**
 - **Ask** — chat with your chosen model, explain code, and understand errors.
 - **Plan** — investigate the project with read-only tools and work out an approach before editing.
 - **Agent** — generate code, edit multiple files, debug, refactor, review code, and run tests.
-- **MCP & browser tools** — connect external tools and inspect web pages through **Watta: MCP & Browser Tools**.
+- **MCP & browser tools** — connect external tools and inspect web pages through **Watta: MCP & Browser Tools**. Choose **Add MCP server by URL** or **Try Microsoft Learn** to test a public server with an example prompt.
 
 ## Inline code completion
 
