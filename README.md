@@ -2,7 +2,7 @@
 
 Build features, fix bugs, and refactor across files in your editor. Choose your AI model and work through one Watta account — no separate provider API keys.
 
-**Latest release:** [0.19.21](https://github.com/srknlabs/watta_ai_ide_extension/releases/tag/v0.19.21) · [Changelog](CHANGELOG.md)
+**Latest release:** [0.19.25](https://github.com/srknlabs/watta_ai_ide_extension/releases/tag/v0.19.25) · [Changelog](CHANGELOG.md)
 
 [Install from VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=watta-ai.watta-ai-vscode) · [Install from Open VSX](https://open-vsx.org/extension/watta-ai/watta-ai-vscode)
 
